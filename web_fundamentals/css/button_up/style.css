@@ -1,0 +1,51 @@
+.button_1{
+    margin: 30px;
+    margin-bottom: 8px;
+}
+
+.search_button{
+    font-weight: bold;
+    font-size: small;
+    text-align: center;
+    background-color: whitesmoke;
+    color: darkcyan;
+    border: 2px solid darkcyan;
+    border-radius: 15px;
+    width: 125px;
+    height: 30px;
+    padding: 5px;
+    
+}
+
+.button_2{
+    margin-left: 30px;
+    margin-bottom: 8px;
+}
+
+.plus_button{
+    font-weight: bolder;
+    font-size: large;
+    text-align: center;
+    background-color: mediumaquamarine;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    width: 35px;
+    height: 35px;
+}
+
+.button_3{
+    margin-left: 30px;
+}
+
+.create_account_button{
+    color: white;
+    background-color: steelblue;
+    font-size: large;
+    width: 175px;
+    border: solid black;
+    box-shadow: 3px 3px 0px black;
+
+}
+
+
