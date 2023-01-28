@@ -3,6 +3,7 @@
     padding: 0;
     font-family: sans-serif;
 }
+/* START OF NAV-BAR */
 li{
     list-style: none;
     padding: 10px;
@@ -38,12 +39,14 @@ a{
 .nav-links > li{
     margin-top: 5px;
 }
-/* END OF TOP BAR HERE  */
+/* END OF NAV-BAR */
 .main_container{
     background-color: white;
     color: #000000;
     display: flex;
 }
+/* START OF COLUMN ONE */
+/* START OF USER CARD */
 .user_card{
     width: 500px;
     border: grey solid 2px;
@@ -88,6 +91,7 @@ a{
     color: #225FDE;
     text-decoration: underline;
 }
+/* START OD EDUCATION BOX */
 .education{
     width: 500px;
     border: grey solid 2px;
@@ -107,18 +111,21 @@ a{
 }
 .dates{
     color: darkgrey;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .column_1{
-    margin-right: 100px;
+    margin-right: 60px;
     margin-top: 50px;
 }
+/* END OF EDUCATION BOX */
 /* END OF COLUMN ONE */
+/* START OF OF COLUMN TWO */
 .column_2{
     margin-left: 0;
     margin-top: 50px;
 }
+/* START OF CONNECTION REQUESTS BOX */
 .connection_requests{
     width: 225px;
     border: grey solid 2px;
@@ -137,12 +144,13 @@ a{
     display: flex;
     background-color: #262626;
     color: lightgray;
-    height: 30px;
+    height: 40px;
 }
 .requests, .connections{
     margin: 2px;
     padding: 5px;
 }
+/* THE .row CLASS AFFECTS ALL PHOTOS/NAMES IN COLUMN 2 */
 .row{
     display: flex;
     align-items: center;
@@ -151,8 +159,8 @@ a{
     margin-left: 3px;
 }
 .row > img{
-    margin: 2px;
-    height: 50px;
+    margin: 3px;
+    height: 40px;
     border-radius: 50%;
     border: #000000 solid 1px;
 }
@@ -168,16 +176,18 @@ a{
     margin: 0;
     padding: 2px;
 }
+/* START OF YOUR CONNECTIONS BOX */
 .your_connections{
     width: 225px;
+    height: 280px;
     border: grey solid 2px;
-    margin-top: 15px;
+    margin-top: 30px;
 }
 .your_connections_header{
     display: flex;
     background-color: #262626;
     color: lightgray;
-    height: 30px;
+    height: 40px;
 }
 .icon500{
     background-color: lightgrey;
@@ -198,5 +208,5 @@ a{
 .connections_footer{
     display: flex;
     border-top: gray solid 2px;
-    height: 20px;
+    height: 30px;
 }
