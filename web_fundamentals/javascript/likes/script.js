@@ -5,9 +5,9 @@ var likes = [
     document.querySelector(".likesThree")]
 
 
-function increase(id){
-    clicks[id]++;
-    likes[id].innerHTML =  clicks[id] + " like(s)";
+function increase(element){
+    clicks[element]++;
+    likes[element].innerHTML =  clicks[element] + " like(s)";
 }
 
 // THIS WAS MY ORIGINAL SET UP, BUT EACH BUTTON HAD THE FUNCTION LABELED AS THE FOLLOWING HERE
