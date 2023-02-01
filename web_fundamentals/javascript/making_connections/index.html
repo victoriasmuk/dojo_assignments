@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="nav">
+        <ul class="nav-links">
+            <h1 class="nav-title">Profile</h1>
+            <li><a href="#">Home</a></li>
+            <li><a href="#" class="active">My Profile</a></li>
+            <li><a href="#">Find Connections</a></li>
+        </ul>
+        <li><button class="btn">Sign Out</button></li>
+    </div>
+    <div class="main_container">
+        <div class="column_1">
+            <div class="user_card">
+                <div class="header"></div>
+                <img class="profile_photo" src="images/vsmuk.jpeg" alt="profile photo">
+                <h1 class="user_name">Victoria Smuk</h1>
+                <div class="location">
+                    <img src="icons/map-marker.png" alt="location icon">
+                    <h3>Cleveland, OH</h3>
+                </div>
+                <div class="biography">
+                    <p>Developer | Engineer | Problem Solver</p>
+                    <p>Master of shadows and the Internet!</p>
+                </div>
+                <div class="edit_button">
+                    <img src="icons/gear.png" alt="gear icon">
+                    <a onclick="editMe()" href="#">edit profile</a>
+                </div>
+            </div>
+            <div class="education">
+                <div class="edu_header">
+                    <h4>Education</h4>
+                </div>
+                <div class="edu_content">
+                    <h3>Coding Dogo - Full Stack Bootcamp</h3>
+                    <h5 class="dates">January 2023 - April 2023</h5>
+                    <h5>Triple black belt in Python, MERN, and C#</h5>
+                </div>
+        </div>
+        </div>
+        <div class="column_2">
+            <div class="connection_requests">
+                <div class="request_header">
+                    <h5 class="icon2">2</h5>
+                    <h4>Connection Requests</h4>
+                </div>
+                <div class="requests">
+                    <div class="row" id="user1">
+                        <img src="images/todd-s.jpg" alt="Todd">
+                        <h4>Todd E</h4>
+                        <img src="icons/accept-circle.png" alt="accept" id="action1" onclick="removeMe(this.id)">
+                        <img src="icons/close-circle.png" alt="deny" id="action2" onclick="removeMe(this.id)">
+                    </div>
+                    <div class="row" id="user2">
+                        <img src="images/phil-s.jpg" alt="Phil">
+                        <h4>Phil K</h4>
+                        <img src="icons/accept-circle.png" alt="accept" id="action3" onclick="removeMe2(this.id)">
+                        <img src="icons/close-circle.png" alt="deny" id="action4" onclick="removeMe2(this.id)">
+                    </div>
+                </div>
+            </div>
+            <div class="your_connections">
+                <div class="your_connections_header">
+                    <h5 class="icon500">500</h5>
+                    <h4>Your Connections</h4>
+                </div>
+                <div class="connections">
+                    <div class="row">
+                        <img src="images/adrien-s.jpg" alt="Adrien">
+                        <h4>Adrien D</h4>
+                    </div>
+                    <div class="row">
+                        <img src="images/anne-s.jpg" alt="Anne">
+                        <h4>Anne J</h4>
+                    </div>
+                    <div class="row">
+                        <img src="images/alayne-s.jpg" alt="Alayne">
+                        <h4>Alayne T</h4>
+                    </div>
+                    <div class="row">
+                        <img src="images/arry-s.jpg" alt="Arry">
+                        <h4>Arry Y</h4>
+                    </div>
+                </div>
+                <div class="connections_footer">
+                    <a href="#">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
