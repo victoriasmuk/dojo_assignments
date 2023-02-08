@@ -80,7 +80,7 @@ class BankAccount:
 
 
 victoria = User("Victoria","Smuk","vicsmuk@icloud.com",22)
-# felix = User("Felix", "S", "felix@gmail.com", 25)
-# ella = User("Ella", "A", "ella@gmail.com", 20)
+felix = User("Felix", "S", "felix@gmail.com", 25)
+ella = User("Ella", "A", "ella@gmail.com", 20)
 
 victoria.display_user_balance().make_deposit(200)
