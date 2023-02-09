@@ -9,3 +9,5 @@ python/fundamentals/fundamentals
 python/fundamentals/introduction
 python/fundamentals/oop/bank_account.py
 python/fundamentals/oop/user.py
+python/fundamentals/extras
+python/flask/fundamentals/hello_flask
