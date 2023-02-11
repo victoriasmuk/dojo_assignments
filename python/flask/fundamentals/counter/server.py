@@ -6,9 +6,11 @@ app.secret_key = 'keep it secret, keep it safe'
 def index():
     if 'refresh_num' in session:
         session['refresh_num'] += 1
+        session['actual'] += 1
     else:
         session['refresh_num'] = 0
-    return render_template("index.html", refresh_number=session['refresh_num'])
+        session['actual'] = 0
+    return render_template("index.html")
 
 @app.route('/count')
 def count():
@@ -16,7 +18,7 @@ def count():
 
 @app.route('/count_two')
 def count_two():
-    session['refresh_num'] = 1 + session['refresh_num']
+    session['refresh_num'] += 1
     return redirect('/')
 
 @app.route('/reset')
@@ -29,8 +31,6 @@ def increment():
     increment = int(request.form['increments'])
     if 'refresh_num' in session:
         session['refresh_num'] += increment - 1
-    else:
-        session['refresh_num'] = increment
     return redirect('/')
 
 @app.route('/destroy_session')

@@ -8,19 +8,23 @@
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     <title>Counter</title>
 </head>
-<body>
-    <div class="top">
-        <h1>Counter</h1>
-        <span> {{refresh_number}} </span>
-    </div>
-    <div class="buttons">
-        <a class="btn btn-outline-dark" href="/count">Add One!</a>
-        <a class="btn btn-outline-success" href="/count_two">Add Two!</a>
-        <a class="btn btn-outline-danger" href="/reset">Reset!</a>
-        <form action="/increment" method="post">
-            <label for="increments" >Pick a number!</label>
-            <input type="number" name="increments">
-        </form>
+<body class="p-3 mb-2 bg-body-secondary">
+    <div class="card text-center">
+        <h1 class="card-header">Counter</h1>
+        <div class="top">
+            <span> Counter Value: {{ session['refresh_num'] }} </span>
+            <span> Actual Value: {{ session['actual'] }}</span>
+        </div>
+        <div class="buttons">
+            <a class="btn btn-outline-dark" href="/count">Add One!</a>
+            <a class="btn btn-outline-dark" href="/count_two">Add Two!</a>
+            <a class="btn btn-outline-dark" href="/reset">Reset!</a>
+            <a class="btn btn-outline-dark" href="/destroy_session">Clear Session</a>
+            <form action="/increment" method="post" class="d-flex">
+                <input type="number" name="increments" class="form-control me-2" placeholder="Pick a number">
+                <button for="increments" class="btn btn-outline-dark">Submit!</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
