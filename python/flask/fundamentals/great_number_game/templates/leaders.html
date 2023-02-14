@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Great Number Game</title>
+</head>
+<body>
+    <div class="card">
+        <h1 class="card-header">Leaderboard</h1>
+        <div class="card-body">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Attempts</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>{{ session['name'] }}</td>
+                        <td>{{ session['count'] }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <a href="/reset" type='submit' class="btn btn-outline-dark">HOME</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

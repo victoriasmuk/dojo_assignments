@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-body{
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.p-3.text-success-emphasis.bg-success-subtle.border-success-subtle.rounded-3{
+    position: absolute; top: 70%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 160px;
+}
+.p-3.text-danger-emphasis.bg-danger-subtle.border-danger-subtle.rounded-3{
+    position: absolute; top: 70%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 160px;
+}
+table{
+    font-size: larger;
+
+    
+}
