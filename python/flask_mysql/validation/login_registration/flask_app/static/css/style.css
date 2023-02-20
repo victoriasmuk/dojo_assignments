@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.card{
+    padding: 0 50px 0 50px;
+    border: none;
+}
+.card-header{
+    background-color: #9AA087;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
+}
+.card-body{
+    background-color: #C8CDBA;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; */
+}
+/* th, td{
+    text-align: center;
+} */
+a{
+    text-decoration: none;
+    /* color: white; */
+    color: black;
+}
+ul{
+    border: #9AA087 solid 2px;
+}
+.card-footer{
+    background-color: #9AA087;
+    color: white;
+}
+.list-group.list-group-flush{
+    padding: 10px;
+    background-color: #C8CDBA;
+    gap: 10px;
+}
+.list-group-item{
+    background-color: #C8CDBA;
+}
+.form-floating{
+    padding: 5px;
+    background-color: #C8CDBA;
+}
