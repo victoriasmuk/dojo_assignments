@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Show Book</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-body">
+            <div class="card-header">
+                <h1>Books</h1>
+                <a href="/" class="navbar-text">Home</a>
+            </div>
+            <div class="row">
+                <div class="col-sm-5 col-md-6">
+                    <h3 class="card-header">Title: {{book.title}}</h3>
+                    <div class="card-body">
+                        <h4>Favorited by:</h4>
+                        <ul class="list-group list-group-flush">
+                            {% for author in book.authors_who_favorited %}
+                            <li class="list-group-item"> {{author.name}} </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                    <form action="/join_author" method="post">
+                        <h3 class="card-header">Add Book's Favorite</h3>
+                        <input type="hidden" name="book_id" value="{{book.id}}">
+                        <div class="form-floating">
+                            <select name='author_id' class="form-select">
+                                {% for author in unfavorited_authors %}
+                                <option value ='{{author.id}}'>{{author.name}}</option>
+                                {% endfor %}
+                            </select>
+                            <label>Author</label>
+                        </div>
+                        <div class="card-body">
+                            <button type="submit" class="btn btn-outline-dark" value="add author">Add</button>
+                        </div>            
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Show Author</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-body">
+            <div class="card-header">
+                <h1>Books</h1>
+                <a href="/" class="navbar-text">Home</a>
+            </div>
+            <div class="row">
+                <div class="col-sm-5 col-md-6">
+                    <h3 class="card-header">{{author.name}}'s Favorite Books</h3>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Number of pages:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for book in author.favorite_books %}
+                            <tr>
+                                <td> {{book.title}} </td>
+                                <td> {{book.num_of_pages}} </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                    <form action="/join_book" method="post">
+                        <h3 class="card-header">Add Author's Favorite</h3>
+                        <input type="hidden" name="author_id" value="{{author.id}}">
+                        <div class="form-floating">
+                            <select name='book_id' class="form-select">
+                                {% for book in unfavorited_books %}
+                                <option value ='{{book.id}}'>{{book.title}}</option>
+                                {% endfor %}
+                            </select>
+                            <label>Book</label>
+                        </div>
+                        <div class="card-body">
+                            <button type="submit" class="btn btn-outline-dark" value="add book">Add</button>
+                        </div>            
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
